@@ -1,0 +1,8 @@
+standalone/domain/QuakeCollection.class
+standalone/Main.class
+standalone/domain/CustomDateDeserializer.class
+standalone/domain/QuakeGeometry.class
+standalone/config/WebSocketConfig.class
+standalone/domain/QuakeIncident.class
+standalone/domain/QuakeCollectionMetaData.class
+standalone/domain/QuakeProperty.class

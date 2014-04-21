@@ -1,0 +1,13 @@
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/QuakeGeometry.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/QuakeCollectionMetaData.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/QuakeCollection.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/Main.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/BusCollectionMetaData.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/CustomDateDeserializer.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/BusProperty.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/QuakeProperty.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/config/WebSocketConfig.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/BusDublinCollection.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/QuakeIncident.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/web/BusDublinController.java
+/Users/aironman/Documents/ws-spring4-websockets/dublin-bus-spring-websockets/src/main/java/standalone/domain/BusData.java

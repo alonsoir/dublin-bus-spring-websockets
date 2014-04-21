@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-http="http://www.springframework.org/schema/integration/http"
+	xmlns:int-amqp="http://www.springframework.org/schema/integration/amqp"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
+		http://www.springframework.org/schema/integration/http http://www.springframework.org/schema/integration/http/spring-integration-http.xsd">
+
+	<import resource="rabbit-context.xml"/>
+	<!-- ojito que estas preguntando cada segundo, voy a poner cada 10 seg -->
+	<int:inbound-channel-adapter channel="businfotrigger" expression="''">
+		<int:poller fixed-delay="4000"></int:poller>
+	</int:inbound-channel-adapter>
+	
+	<int:channel id="businfo"/>
+
+	<int:channel id="businfotrigger"></int:channel>
+
+	<int-http:outbound-gateway id="busDublinHttpGateway"
+	    request-channel="businfotrigger"
+	    url="http://dublinbus-api.heroku.com/stops"
+	    http-method="GET"
+	    expected-response-type="java.lang.String"
+	    charset="UTF-8"
+	    reply-channel="businfo">
+	</int-http:outbound-gateway>
+
+	<int-amqp:outbound-channel-adapter amqp-template="amqpTemplate" channel="businfo" />
+
+</beans>
