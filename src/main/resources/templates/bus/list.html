@@ -173,11 +173,12 @@
     </script>    
   </head>
   <body onload="initialize();connect();">
-    <div id="map-canvas">
     
-    </div>
-    <a href="#" onclick="tryGeoLocation(map)">Where am i?</a>
     <div class="container">
+    	<div class="row">
+    		<div id="map-canvas" class="col-sm-12"></div>
+    		<a href="#" onclick="tryGeoLocation(map)">Where am i?</a>
+	    </div>
 	    <div class="row">
 		    <div class="col-sm-12">
 		     	<h1 class="well well-small">Location Dublin buses</h1>
