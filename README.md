@@ -18,6 +18,8 @@ Application can then be started up using the following command:
 
 mvn spring-boot:run
 
+todo
+
 url para saber el servicio de una linea, el bus empieza y acaba en dos puntos distintos y 
 esto me da la ruta con los puntos que hay en medio, mola. Cuantos servicios hay?
 http://dublinbus-api.heroku.com/services/2
@@ -42,8 +44,4 @@ provide a custom paginate table for the incoming events, there are a lot of them
 Current live information link doesnt work, internal server error
 
 
-
-    <script type="text/javascript"
-      		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBQOHsCmX2_zHvytZgqIIlnxQNBVssdm7c&amp;sensor=true">
-    </script>
 
