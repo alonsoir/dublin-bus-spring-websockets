@@ -17,3 +17,33 @@ To run the application, first set up rabbitmq and add in the stomp plugin
 Application can then be started up using the following command:
 
 mvn spring-boot:run
+
+url para saber el servicio de una linea, el bus empieza y acaba en dos puntos distintos y 
+esto me da la ruta con los puntos que hay en medio, mola. Cuantos servicios hay?
+http://dublinbus-api.heroku.com/services/2
+
+Get detailed stop information for a particular service
+
+route: the name of the route the service operates on
+id: the ID of the route
+
+http://dublinbus-api.heroku.com/services/2/0202
+
+Gets stop information for the #2 from UCD to O'Connell St
+
+Result is exactly as for /services/{route} but the data array will contain exactly one item
+
+things to do:
+
+provide a way to show a map with lat lon provided google-maps https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+provide a custom paginate table for the incoming events, there are a lot of them.
+
+Current live information link doesnt work, internal server error
+
+
+
+    <script type="text/javascript"
+      		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBQOHsCmX2_zHvytZgqIIlnxQNBVssdm7c&amp;sensor=true">
+    </script>
+

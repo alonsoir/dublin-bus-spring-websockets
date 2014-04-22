@@ -12,7 +12,7 @@
 	<import resource="rabbit-context.xml"/>
 	<!-- ojito que estas preguntando cada segundo, voy a poner cada 10 seg -->
 	<int:inbound-channel-adapter channel="businfotrigger" expression="''">
-		<int:poller fixed-delay="15000"></int:poller>
+		<int:poller fixed-delay="60000"></int:poller>
 	</int:inbound-channel-adapter>
 	
 	<int:channel id="businfo"/>
