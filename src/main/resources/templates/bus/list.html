@@ -20,7 +20,7 @@
         padding: 0px
       }
     </style>
-    <script src="http://maps.googleapis.com/maps/api/js?key=PLEASE_PROVIDE_YOUR_API_KEY&amp;sensor=true" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBQOHsCmX2_zHvytZgqIIlnxQNBVssdm7c&amp;sensor=true" type="text/javascript"></script>
     <script type="text/javascript">
     	var map = null;
 //53.3243201,-6.251695,11z dublin
@@ -63,7 +63,7 @@
 				            	            var lat = latlon[0];
 				            	            var lon = latlon[1];
 											//var side = "handleGeLocationLatLonSide('" + name + "'," + lat + "," + lon + ")";
-			            	            	var s = "handleGeLocationLatLon(" + lat + "," + lon + ")";
+			            	            	var s = "handleGeLocationLatLon(" + lat + "," + lon + ");";
 			            	            	console.log(s);
 			            	            	tds += "<td onclick=" + s + ">" + obj[prop] +"</td>";
 			            	            	//tds += "<td onclick=" + side + ">" + obj[prop] +"</td>";
@@ -164,15 +164,19 @@
     	    	    content: content
     	    	  };
     	  		  //alert("content: " + content + " lat: " + lat + " lon: " + lon + " options: " + options);	
-    	    	  var infowindow = new google.maps.InfoWindow(options);
-    	    	  map.setCenter(options.position);		
-    	    	  console.log("handleGeLocationLatLon done!");
-      }
+			var infowindow = new google.maps.InfoWindow(options);
+    	    map.setCenter(options.position);		
+    	    console.log("handleGeLocationLatLon done!");
+    	    $('#busbody').focus();
+    	}
   	
     </script>    
   </head>
   <body onload="initialize();connect();">
-    <div id="map-canvas"></div>
+    <div id="map-canvas">
+    
+    </div>
+    <a href="#" onclick="tryGeoLocation(map)">Where am i?</a>
     <div class="container">
 	    <div class="row">
 		    <div class="col-sm-12">
