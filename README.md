@@ -43,5 +43,7 @@ provide a custom paginate table for the incoming events, there are a lot of them
 
 Current live information link doesnt work, internal server error
 
-
+todo
+cuando hagas el evento onclick, tienes que ir directamente al div del map
+tienes que poner un script que te permita paginar los resultados, son muchisisimos y hay que buscarlos.
 
