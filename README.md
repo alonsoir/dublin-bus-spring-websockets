@@ -44,6 +44,17 @@ provide a custom paginate table for the incoming events, there are a lot of them
 Current live information link doesnt work, internal server error
 
 todo
-cuando hagas el evento onclick, tienes que ir directamente al div del map
-tienes que poner un script que te permita paginar los resultados, son muchisisimos y hay que buscarlos.
+cuando hagas el evento onclick, tienes que ir directamente al div del map. done
+
+prioritario
+
+tienes que poner un script que te permita paginar los resultados, son muchisisimos y hay que buscarlos. Con eso, acabas!
+
+estas probando con dataTables http://live.datatables.net/welcome/1/edit
+para ello tienes que usar una version superior de jquery, esta es la antigua que usabas.
+<script th:src="@{/js/jquery-1.7.2.js}" src="../../js/jquery-1.7.2.js"></script>
+
+funciona, mas o menos, porque necesito que el servidor rabbitmq me devueva los datos de forma escalonada, pero eso es algo que se debe hacer desde rabbitmq...
+
+    
 

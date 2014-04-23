@@ -5,20 +5,33 @@
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../../static/css/bootstrap.min.css"/>
     <link rel="stylesheet" th:href="@{/css/bootstrap-theme.css}" href="../../static/css/bootstrap-theme.css"/>
     <link rel="stylesheet" th:href="@{/css/application.css}" href="../../static/css/application.css"/>
-        
+	<!--necesario para dataTables  -->
+	<link href="//datatables.net/download/build/nightly/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="//datatables.net/download/build/nightly/jquery.dataTables.js"></script>
+    
     <script th:src="@{/js/sockjs-0.3.4.js}" src="../../js/sockjs-0.3.4.js"></script>
     <script th:src="@{/js/stomp.js}" src="../../js/stomp.js"></script>
-    <script th:src="@{/js/jquery-1.7.2.js}" src="../../js/jquery-1.7.2.js"></script>
     <script th:src="@{/js/moment.min.js}" src="../../js/moment.min.js"></script>
+    
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
     <style>
       html, body, #map-canvas {
+		font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+		color: #333;
+		background-color: #fff;
 	    width: 100%;
 		height: 300px;
         margin: 0px;
         padding: 0px
       }
+
+	  div.container {
+		min-width: 980px;
+		margin: 0 auto;
+	  }
+      
     </style>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBQOHsCmX2_zHvytZgqIIlnxQNBVssdm7c&amp;sensor=true" type="text/javascript"></script>
     <script type="text/javascript">
@@ -95,7 +108,12 @@
 		//alert(map + " init");
      // Try HTML5 geolocation
 		tryGeoLocation(map);
+
+     	$(document).ready( function () {
+			  var table = $('#busbody').DataTable();
+		} );
 		console.log("initialize done!");
+		
       }
 
       function tryGeoLocation(map){
@@ -189,12 +207,20 @@
 		      <table class="table table-bordered table-striped" id="busbody">
 		        <thead>
 		          <tr>
-		          	<th width="20%">Current live information</th>
-		            <th width="20%">Name Station</th>
-		            <th width="20%">Location</th>
-		            <th width="20%">active</th>
+		          		<th width="20%">Current live information</th>
+			            <th width="20%">Name Station</th>
+			            <th width="20%">Location</th>
+			            <th width="20%">active</th>
 		          </tr>
 		        </thead>
+		        <tfoot>
+					<tr>
+						<th width="20%">Current live information</th>
+			            <th width="20%">Name Station</th>
+			            <th width="20%">Location</th>
+			            <th width="20%">active</th>
+					</tr>
+				</tfoot>
 		        <tbody>
 		        </tbody>
 		      </table>
