@@ -18,7 +18,8 @@ Application can then be started up using the following command:
 
 mvn spring-boot:run
 
-todo
+things to do:
+to implement needed services for  
 
 url para saber el servicio de una linea, el bus empieza y acaba en dos puntos distintos y 
 esto me da la ruta con los puntos que hay en medio, mola. Cuantos servicios hay?
@@ -41,20 +42,8 @@ provide a way to show a map with lat lon provided google-maps https://developers
 
 provide a custom paginate table for the incoming events, there are a lot of them.
 
-Current live information link doesnt work, internal server error
+Current live information link does not  work, internal server error, i need to communicate it in order that developers may fix it!
 
-todo
-cuando hagas el evento onclick, tienes que ir directamente al div del map. done
-
-prioritario
-
-tienes que poner un script que te permita paginar los resultados, son muchisisimos y hay que buscarlos. Con eso, acabas!
-
-estas probando con dataTables http://live.datatables.net/welcome/1/edit
-para ello tienes que usar una version superior de jquery, esta es la antigua que usabas.
-<script th:src="@{/js/jquery-1.7.2.js}" src="../../js/jquery-1.7.2.js"></script>
-
-funciona, mas o menos, porque necesito que el servidor rabbitmq me devueva los datos de forma escalonada, pero eso es algo que se debe hacer desde rabbitmq...
 
     
 
