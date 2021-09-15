@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>org.projectreactor</groupId>
 			<artifactId>reactor-tcp</artifactId>
-			<version>1.0.0.RELEASE</version>
+			<version>1.0.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
